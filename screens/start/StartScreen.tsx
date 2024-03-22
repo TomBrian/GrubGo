@@ -1,35 +1,77 @@
-import {StatusBar, View} from 'react-native';
+import {ScrollView, StatusBar, TouchableOpacity, View} from 'react-native';
 import React from 'react';
 import {Container} from '../../styles/layout';
 import {SVGElements} from '../../components/SVGElements';
 import {Typography} from '../../styles/typography';
 import {COLORS} from '../../styles/colors';
 import PhoneInput from '../../components/PhoneInput';
+import Button from '../../components/Button';
 
 export default function StartScreen() {
   return (
     <Container style={{backgroundColor: '#fff'}}>
       <StatusBar backgroundColor="#fff" barStyle="dark-content" />
-      <View style={{width: '100%', height: '100%'}}>
+      <ScrollView style={{width: '100%', height: '100%'}}>
         <SVGElements.Logo />
         <Typography.P style={{marginTop: 16}}>
           Deliciously Delivered
         </Typography.P>
-        <View style={{flexDirection: 'row', marginVertical: 24}}>
-          <Typography.H4>
-            From Kitchen to Your Doorstep,{' '}
+        <View style={{marginVertical: 24}}>
+          <Typography.H4>From Kitchen to Your Doorstep, </Typography.H4>
+          <View style={{width: '100%'}}>
             <Typography.H4 style={{color: COLORS.PRIMARY}}>
               Instantly.
             </Typography.H4>
-          </Typography.H4>
+          </View>
         </View>
-        <View style={{marginTop: 16}}>
+        <View>
           <Typography.P>
             Please enter your phone number to continue
           </Typography.P>
           <PhoneInput />
         </View>
-      </View>
+        <View style={{height: 24}} />
+        <Button type="primary" text="Get Started" />
+        <Typography.P style={{marginVertical: 32, textAlign: 'center'}}>
+          Already have an account?{' '}
+        </Typography.P>
+        <Button type="secondary" text="Sign In" />
+        <View style={{height: 24}} />
+        <TouchableOpacity
+          onPress={() => console.log('Skip')}
+          style={{
+            alignItems: 'center',
+            flexDirection: 'row',
+            justifyContent: 'center',
+            backgroundColor: '#efefef',
+
+            padding: 16,
+            borderRadius: 32,
+          }}>
+          <SVGElements.FacebookIcon />
+          <Typography.P style={{color: COLORS.DARK, marginLeft: 16}}>
+            Sign In With Facebook
+          </Typography.P>
+        </TouchableOpacity>
+        <TouchableOpacity
+          onPress={() => console.log('Skip')}
+          style={{
+            alignItems: 'center',
+            flexDirection: 'row',
+            justifyContent: 'center',
+            backgroundColor: '#efefef',
+            padding: 16,
+            marginTop: 16,
+            borderRadius: 32,
+          }}>
+          <SVGElements.GoogleIcon />
+
+          <Typography.P style={{color: COLORS.DARK, marginLeft: 16}}>
+            {' '}
+            Sign In With Google
+          </Typography.P>
+        </TouchableOpacity>
+      </ScrollView>
     </Container>
   );
 }
