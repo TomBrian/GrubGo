@@ -7,12 +7,14 @@ import {TouchableOpacityProps} from 'react-native';
 export default function Button({
   type,
   text,
+  onPress,
 }: {
   type: 'primary' | 'secondary';
   text: string;
+  onPress: () => void;
 }) {
   return (
-    <ButtonWrapper type={type}>
+    <ButtonWrapper onPress={onPress} type={type}>
       <Typography.P
         style={{
           color: type === 'primary' ? '#fff' : '#3C3C3C',

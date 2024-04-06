@@ -4,6 +4,7 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import StartScreen from './screens/start/StartScreen';
 import Splash from './screens/Splash';
 import {Appearance} from 'react-native';
+import GetStarted from './screens/getstarted';
 
 const Stack = createNativeStackNavigator();
 
@@ -22,6 +23,7 @@ function App(): React.JSX.Element {
     <NavigationContainer>
       <Stack.Navigator screenOptions={{headerShown: false}}>
         <Stack.Screen name="Start" component={StartScreen} />
+        <Stack.Screen name="GetStarted" component={GetStarted} />
       </Stack.Navigator>
     </NavigationContainer>
   );

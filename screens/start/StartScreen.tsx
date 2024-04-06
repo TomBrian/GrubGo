@@ -7,7 +7,8 @@ import {COLORS} from '../../styles/colors';
 import PhoneInput from '../../components/PhoneInput';
 import Button from '../../components/Button';
 
-export default function StartScreen() {
+export default function StartScreen({navigation}: any) {
+  const [phoneNumber, setPhoneNumber] = React.useState('');
   return (
     <Container style={{backgroundColor: '#fff'}}>
       <StatusBar backgroundColor="#fff" barStyle="dark-content" />
@@ -28,15 +29,21 @@ export default function StartScreen() {
           <Typography.P>
             Please enter your phone number to continue
           </Typography.P>
-          <PhoneInput />
+          <PhoneInput setPhoneNumber={setPhoneNumber} />
         </View>
         <View style={{height: 24}} />
-        <Button type="primary" text="Get Started" />
+        <Button
+          type="primary"
+          onPress={() =>
+            navigation.navigate('GetStarted', {
+              phoneNumber: '+234' + ' ' + '1234567890',
+            })
+          }
+          text="Continue"
+        />
         <Typography.P style={{marginVertical: 32, textAlign: 'center'}}>
           Already have an account?{' '}
         </Typography.P>
-        <Button type="secondary" text="Sign In" />
-        <View style={{height: 24}} />
         <TouchableOpacity
           onPress={() => console.log('Skip')}
           style={{

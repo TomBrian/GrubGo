@@ -3,14 +3,13 @@ import {View} from 'react-native';
 import React from 'react';
 import {default as PInput} from 'react-native-phone-number-input';
 
-export default function PhoneInput() {
+export default function PhoneInput({setPhoneNumber}: {setPhoneNumber: any}) {
   const [value, setValue] = React.useState('');
   const [formattedValue, setFormattedValue] = React.useState('');
   const phoneInput = React.useRef<any>(null);
 
   return (
     <View style={{width: '100%', alignItems: 'baseline'}}>
-      {formattedValue}
       <PInput
         ref={phoneInput}
         defaultValue={value}
@@ -42,6 +41,7 @@ export default function PhoneInput() {
         }}
         onChangeFormattedText={(text: any) => {
           setFormattedValue(text);
+          setPhoneNumber(text);
         }}
         autoFocus
       />
