@@ -1,4 +1,6 @@
 {
   "name": "GrubGo",
-  "displayName": "GrubGo"
+  "displayName": "GrubGo",
+  "android.package": "com.grubgo",
+  "android.config.googleMaps.apiKey": "AIzaSyA5BDvZJFmSirhpSA5V7gXXsYgWBuAyo1M"
 }

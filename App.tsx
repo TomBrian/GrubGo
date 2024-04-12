@@ -1,10 +1,12 @@
 import React from 'react';
-import {NavigationContainer} from '@react-navigation/native';
-import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import StartScreen from './screens/start/StartScreen';
 import Splash from './screens/Splash';
-import {Appearance} from 'react-native';
+import { Appearance } from 'react-native';
 import GetStarted from './screens/getstarted';
+import SetLocation from './screens/SetLocation/SetLocation';
+import MainApp from './screens/app/MainApp';
 
 const Stack = createNativeStackNavigator();
 
@@ -21,9 +23,11 @@ function App(): React.JSX.Element {
     <Splash />
   ) : (
     <NavigationContainer>
-      <Stack.Navigator screenOptions={{headerShown: false}}>
+      <Stack.Navigator screenOptions={{ headerShown: false }}>
         <Stack.Screen name="Start" component={StartScreen} />
         <Stack.Screen name="GetStarted" component={GetStarted} />
+        <Stack.Screen name="SetLocation" component={SetLocation} />
+        <Stack.Screen name="MainApp" component={MainApp} />
       </Stack.Navigator>
     </NavigationContainer>
   );
