@@ -49,7 +49,7 @@ export namespace Typography {
    */
   export const P = styled.Text`
     font-family: 'Inter_Regular';
-    font-size: 14px;
+    font-size: 16px;
     color: #000;
   `;
 }

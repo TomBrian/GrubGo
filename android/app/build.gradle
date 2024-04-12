@@ -89,6 +89,12 @@ android {
             keyAlias 'androiddebugkey'
             keyPassword 'android'
         }
+        release {
+            storeFile file('grubgo.keystore')
+            storePassword '107151125'
+            keyAlias 'key_alias'
+            keyPassword '107151125'
+        }
     }
     buildTypes {
         debug {
@@ -100,6 +106,7 @@ android {
             signingConfig signingConfigs.debug
             minifyEnabled enableProguardInReleaseBuilds
             proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
+            signingConfig signingConfigs.release
         }
     }
 }
