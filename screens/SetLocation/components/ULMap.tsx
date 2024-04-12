@@ -53,7 +53,7 @@ export default function ULMap() {
                 }}
                 style={{
                     width: "100%",
-                    height: 400
+                    height: 500
                 }} >
                 <Marker
                     coordinate={{

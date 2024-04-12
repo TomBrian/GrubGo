@@ -25,7 +25,7 @@ export default function GetStarted({ navigation }: { navigation: any }) {
         <Typography.P style={{ marginBottom: 16 }}>
           Please enter the five digit code that was sent to your number
         </Typography.P>
-        <View style={{ marginBottom: 48 }}>
+        <View style={{ marginBottom: 48, paddingHorizontal: 32 }}>
           <SplitOTPField length={5} />
         </View>
         <Button

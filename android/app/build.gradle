@@ -92,7 +92,7 @@ android {
         release {
             storeFile file('grubgo.keystore')
             storePassword '107151125'
-            keyAlias 'key_alias'
+            keyAlias 'your_key_alias'
             keyPassword '107151125'
         }
     }

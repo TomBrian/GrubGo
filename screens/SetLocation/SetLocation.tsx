@@ -54,13 +54,13 @@ export default function SetLocation({ navigation }: any) {
     }, [locationGranted]);
     return (
         <ScrollView style={{ height: "100%", paddingTop: StatusBar.currentHeight, backgroundColor: "white" }}>
-            <View style={{ backgroundColor: "white", alignItems: "center", paddingHorizontal: 32, paddingVertical: 32 }}>
+            <View style={{ backgroundColor: "white", alignItems: "center", paddingHorizontal: 32, paddingVertical: 16 }}>
                 <Typography.H3 style={{ color: COLORS.DARK }}>Set your delivery location</Typography.H3>
             </View>
             <ULMap />
             {
                 locationGranted ? (
-                    <View style={{ backgroundColor: "white", alignItems: "center", flex: 1, justifyContent: "center", paddingHorizontal: 32, paddingVertical: 32 }}>
+                    <View style={{ backgroundColor: "white", alignItems: "center", flex: 1, justifyContent: "center", paddingHorizontal: 16, paddingVertical: 16 }}>
                         <Banner type='success'>
                             <Typography.P style={{ color: COLORS.DARK }}>Your location has been set to <Typography.P style={{ fontWeight: "bold" }}>{AddressName}</Typography.P></Typography.P>
                         </Banner>

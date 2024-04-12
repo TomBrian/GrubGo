@@ -20,7 +20,7 @@ export default function MainAppHeader() {
         });
     }, []);
     return (
-        <View style={{ width: "100%", backgroundColor: "white", paddingVertical: 24, paddingHorizontal: 24 }}>
+        <View style={{ width: "100%", backgroundColor: "white", paddingVertical: 16, paddingHorizontal: 24 }}>
             <View style={{ flexDirection: "row", justifyContent: "space-between", alignItems: "center" }}>
                 <View style={{ flexDirection: "row" }}>
                     <Typography.P style={{ fontWeight: 'bold' }}>

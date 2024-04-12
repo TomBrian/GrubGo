@@ -15,7 +15,7 @@ export default function Home() {
         <ScrollView style={{ backgroundColor: "white", height: "100%", width: "100%" }}>
             <View style={{
                 width: "100%",
-                paddingHorizontal: 32
+                paddingHorizontal: 16
             }}>
                 <SearchBar />
             </View>
@@ -28,7 +28,7 @@ export default function Home() {
                     maxHeight: 55
                 }}>
                 <View style={{
-                    paddingLeft: 32,
+                    paddingLeft: 16,
                     flexDirection: 'row',
 
                 }}>
@@ -40,8 +40,8 @@ export default function Home() {
             </ScrollView>
             <View style={{
                 width: "100%",
-                marginTop: 48,
-                paddingHorizontal: 32
+                marginTop: 24,
+                paddingHorizontal: 16
             }}>
                 <Typography.H4 style={{ textTransform: "uppercase" }}>
                     Popular restaurants near you
@@ -50,11 +50,11 @@ export default function Home() {
             <View style={{ width: "100%" }}>
                 <ScrollView horizontal style={{
                     marginTop: 24,
-                    paddingBottom: 32
+                    paddingBottom: 16
                 }}>
                     <View style={{
                         flexDirection: "row",
-                        paddingLeft: 32,
+                        paddingLeft: 16,
                         width: "100%"
                     }} >
                         <RestaurantCard
@@ -78,16 +78,16 @@ export default function Home() {
                     </View>
 
                 </ScrollView>
-                <View style={{ paddingHorizontal: 32 }}>
+                <View style={{ paddingHorizontal: 16 }}>
                     <Typography.H4 style={{
-                        marginTop: 32,
+                        marginTop: 24,
                         textTransform: "uppercase"
                     }}>🏷️ Discover Top Offers !</Typography.H4>
                 </View>
                 <View
                     style={{
                         flexDirection: "column",
-                        paddingHorizontal: 32,
+                        paddingHorizontal: 16,
                     }}
                 >
                     <OfferCard
