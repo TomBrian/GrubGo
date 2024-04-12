@@ -1,11 +1,12 @@
-import React, {useState, useRef} from 'react';
-import {TextInput, View} from 'react-native';
+import React, { useState, useRef } from 'react';
+import { TextInput, View } from 'react-native';
+import { Container } from '../../../styles/layout';
 
 interface SplitOTPFieldProps {
   length: number;
 }
 
-const SplitOTPField: React.FC<SplitOTPFieldProps> = ({length}) => {
+const SplitOTPField: React.FC<SplitOTPFieldProps> = ({ length }) => {
   const [otp, setOTP] = useState<string[]>(Array(length).fill(''));
   const inputRefs = useRef<TextInput[]>([]);
 
@@ -36,11 +37,11 @@ const SplitOTPField: React.FC<SplitOTPFieldProps> = ({length}) => {
   };
 
   return (
-    <View>
+    <View style={{ flexDirection: 'row', width: "100%", justifyContent: "space-between" }}>
       {otp.map((value, index) => (
         <TextInput
           key={index}
-          style={{width: 40, height: 40, borderWidth: 1, margin: 5}}
+          style={{ width: 60, height: 60, textAlign: "center", borderWidth: 0, backgroundColor: "#efefef" }}
           maxLength={1}
           value={value}
           onChangeText={text => handleChange(index, text)}
